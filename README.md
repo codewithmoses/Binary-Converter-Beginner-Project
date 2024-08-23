@@ -1,50 +1,43 @@
-# Tailwind CSS Starter Template
+# Decimal to Binary Converter
 
-# Tailwind Starter Preview
-- Demo site: [Preview starter site](https://codewithmoses.github.io/tailwind-starter-html/)
-This project is a simple, responsive starter template built with Tailwind CSS, Font Awesome, and Google Fonts. It serves as a foundation for creating modern, fast, and accessible websites with ease.
+![Project Screenshot](./screenshoot.png)
 
 ## Project Overview
 
-The purpose of this project is to provide a clean and minimalist template that can be quickly customized to suit various web development needs. The template includes essential sections commonly found on websites, such as a navigation bar, hero section, feature highlights, contact form, and footer.
+This project is a beginner-friendly tool designed to help users convert decimal numbers (base 10) into binary numbers (base 2) and vice versa. Built using HTML, Tailwind CSS, DaisyUI, Font Awesome, and Google Fonts, this project serves as an educational resource for understanding basic number system conversions and practicing front-end web development.
 
-### Key Features
+## Key Features
 
-- **Responsive Design:** The layout adapts seamlessly to different screen sizes, ensuring a great user experience on desktops, tablets, and mobile devices.
-- **SEO-Friendly:** The template includes SEO meta tags to help improve search engine visibility.
-- **Modern Typography:** The site uses the Montserrat font from Google Fonts, giving it a clean and contemporary look.
-- **Icon Integration:** Font Awesome icons are used throughout the site to enhance visual elements.
-- **Tailwind CSS:** The entire site is styled using Tailwind CSS, a utility-first CSS framework that enables rapid development with minimal custom CSS.
+- **Responsive Design:** The layout is fully responsive, ensuring that the converter works well on desktops, tablets, and mobile devices.
+- **SEO-Friendly:** Includes essential SEO meta tags to enhance search engine visibility.
+- **Modern Typography:** The site utilizes the Roboto font from Google Fonts, providing a clean and modern look.
+- **Icon Integration:** Font Awesome icons are used to enhance the visual presentation, particularly in warning and error messages.
+- **Tailwind CSS & DaisyUI:** The project is styled using Tailwind CSS with DaisyUI components, facilitating rapid development and a consistent design language.
 
 ## Sections
 
-### 1. Navigation Bar
-A responsive navigation bar that includes links to different sections of the site and a shopping cart icon. The navigation bar is fixed at the top of the page, ensuring easy access to links as users scroll.
+### 1. Converter Interface
+The main interface consists of two input fields:
+- **Decimal Input:** Allows the user to enter a decimal number that will be automatically converted to binary.
+- **Binary Input:** Allows the user to input a binary number, which will be automatically converted to its decimal equivalent.
 
-### 2. Hero Section
-The hero section features a large, bold heading, a subheading, and a call-to-action button. This area is designed to grab the user's attention and direct them to important content or actions.
+### 2. Error Handling
+If the user enters an invalid binary number (a number containing digits other than 0 and 1), an error message with an informative icon is displayed.
 
-### 3. Features Section
-This section highlights three key features or services of your website. Each feature is represented by a Font Awesome icon, a title, and a brief description, all arranged in a grid layout.
-
-### 4. Contact Section
-A simple contact form is provided, allowing users to send messages or inquiries. The form includes fields for the user's name, email, and message, along with a submit button.
-
-### 5. Footer
-The footer contains copyright information and social media links represented by Font Awesome icons. It provides a way for users to connect with you on various platforms.
+### 3. Footer
+The footer contains a dynamically generated copyright notice that automatically updates with the current year.
 
 ## Technologies Used
 
-- **HTML5:** The structure of the site is built using semantic HTML5 elements.
-- **Tailwind CSS:** The site is styled entirely with Tailwind CSS, which offers a utility-first approach to designing responsive, modern web interfaces.
-  - CDN: [Tailwind CSS CDN](https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js)
-  - Tailwind with Plugins: [Tailwind CSS with Plugins](https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss-with-all-plugins.js)
-- **Font Awesome:** Icons used throughout the site are sourced from Font Awesome, providing a wide range of customizable vector icons.
-  - CDN: [Font Awesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css)
-- **Google Fonts:** The Montserrat font is used to give the site a clean, professional appearance.
-  - Google Fonts: [Montserrat Font](https://fonts.google.com/specimen/Montserrat)
+- **HTML5:** Provides the structure and layout of the project.
+- **Tailwind CSS:** Utilized for styling the project, allowing for quick and responsive design.
+- **DaisyUI:** Adds predefined UI components to the project, enhancing the look and feel without extensive custom CSS.
+- **Font Awesome:** Icons are integrated to enhance user experience, especially in error messaging.
+- **Google Fonts:** The Roboto font is used to maintain a clean and professional appearance.
+- **JavaScript:** Used to handle the conversion logic and dynamic content updates.
+
 ## How to Use
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/tailwind-css-starter-template.git
+   git clone https://github.com/yourusername/decimal-to-binary-converter.git
