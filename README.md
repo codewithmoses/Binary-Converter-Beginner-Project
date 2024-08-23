@@ -40,4 +40,4 @@ The footer contains a dynamically generated copyright notice that automatically 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/decimal-to-binary-converter.git
+   git clone https://github.com/codewithmoses/Binary-Converter-Beginner-Project.git
