@@ -49,50 +49,54 @@
   <body class="mono">
 
     <!-- Navigation Bar -->
+   <div class="container">
     <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <a class="btn btn-ghost font-bold text-xl">Binary<span class="font-thin">Converter</span></a>
-        </div>
-        <div class="flex-none">
-          <button class="btn btn-square btn-ghost">
-            <a href="https://github.com/codewithmoses/Binary-Converter-Beginner-Project">
-              <i class="fa-brands fa-github text-4xl"></i>
-            </a>
-          </button>
-        </div>
+      <div class="flex-1">
+        <a class="btn btn-ghost font-bold text-xl">Binary<span class="font-thin">Converter</span></a>
       </div>
+      <div class="flex-none">
+        <button class="btn btn-square btn-ghost">
+          <a href="https://github.com/codewithmoses/Binary-Converter-Beginner-Project">
+            <i class="fa-brands fa-github text-4xl"></i>
+          </a>
+        </button>
+      </div>
+    </div>
+   </div>
 
     <!-- Main Content -->
-    <div class="hero bg-base-200 min-h-screen">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="text-center lg:text-left">
-            <h1 class="text-5xl font-bold">Decimal to Binary Converter</h1>
-            <p class="py-6">
-                This is a beginner-friendly project designed to help you understand the basics of number system conversion. 
-                With this tool, you can easily convert any decimal number (base 10) into its binary equivalent (base 2) and vice versa. 
-                It's a simple yet powerful way to get hands-on experience with JavaScript, HTML, and CSS while reinforcing fundamental 
-                concepts in computer science and mathematics.
-            </p>
-          </div>
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <form class="card-body">
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Decimal</span>
-                </label>
-                <input type="number" placeholder="Decimal" id="dec-inp" class="input input-bordered" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Binary</span>
-                </label>
-                <input type="number" placeholder="Binary" id="bin-inp" class="input input-bordered" required />
-              </div>
-              <div id="error-msg"></div>
-            </form>
-          </div>
-        </div>
+ <main class="container">
+  <div class="hero bg-base-200 min-h-screen">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-bold">Decimal to Binary Converter</h1>
+        <p class="py-6">
+            This is a beginner-friendly project designed to help you understand the basics of number system conversion. 
+            With this tool, you can easily convert any decimal number (base 10) into its binary equivalent (base 2) and vice versa. 
+            It's a simple yet powerful way to get hands-on experience with JavaScript, HTML, and CSS while reinforcing fundamental 
+            concepts in computer science and mathematics.
+        </p>
       </div>
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Decimal</span>
+            </label>
+            <input type="number" placeholder="Decimal" id="dec-inp" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Binary</span>
+            </label>
+            <input type="number" placeholder="Binary" id="bin-inp" class="input input-bordered" required />
+          </div>
+          <div id="error-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+ </main>
 
     <!-- Footer -->
     <footer class="footer footer-center bg-base-300 text-base-content p-4">
