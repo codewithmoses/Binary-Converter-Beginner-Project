@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="business">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Convert decimal numbers to binary and vice versa with this beginner-friendly tool. Learn basic number system conversions and enhance your web development skills." />
+    <meta name="keywords" content="Decimal to Binary Converter, Tailwind CSS, DaisyUI, JavaScript, HTML, CSS, Web Development" />
+    <meta name="author" content="Moses Oni" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="Decimal to Binary Converter" />
+    <meta property="og:description" content="Easily convert decimal numbers to binary with this beginner-friendly converter. A practical project to learn web development and number system conversions." />
+    <meta property="og:image" content="./screenshoot.png" />
+    <meta property="og:url" content="https://codewithmoses.github.io/tailwind-starter-html/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Title -->
+    <title>Decimal to Binary Converter - Learn and Practice Number System Conversions</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
+    <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss-with-all-plugins.js"></script>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Google Fonts: Cutive Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+    <style>
+      /* Custom CSS for using the Cutive Mono font */
+      .mono {
+        font-family: "Cutive Mono", monospace;
+      }
+    </style>
+  </head>
+
+  <body class="mono">
+
+    <!-- Navigation Bar -->
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost font-bold text-xl">Binary<span class="font-thin">Converter</span></a>
+        </div>
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <a href="https://github.com/yourusername/decimal-to-binary-converter">
+              <i class="fa-brands fa-github text-4xl"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+
+    <!-- Main Content -->
+    <div class="hero bg-base-200 min-h-screen">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="text-center lg:text-left">
+            <h1 class="text-5xl font-bold">Decimal to Binary Converter</h1>
+            <p class="py-6">
+                This is a beginner-friendly project designed to help you understand the basics of number system conversion. 
+                With this tool, you can easily convert any decimal number (base 10) into its binary equivalent (base 2) and vice versa. 
+                It's a simple yet powerful way to get hands-on experience with JavaScript, HTML, and CSS while reinforcing fundamental 
+                concepts in computer science and mathematics.
+            </p>
+          </div>
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Decimal</span>
+                </label>
+                <input type="number" placeholder="Decimal" id="dec-inp" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Binary</span>
+                </label>
+                <input type="number" placeholder="Binary" id="bin-inp" class="input input-bordered" required />
+              </div>
+              <div id="error-msg"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer class="footer footer-center bg-base-300 text-base-content p-4">
+        <aside>
+          <p id="footer-date">Copyright © - All rights reserved by Moses Oni</p>
+        </aside>
+    </footer>
+    
+    <script>
+        // JavaScript to dynamically set the current year
+        document.getElementById('footer-date').innerHTML = `Copyright © ${new Date().getFullYear()} - All rights reserved by Moses Oni`;
+    </script>
+
+    <script>
+        // Initial References
+        let decInp = document.getElementById("dec-inp");
+        let binInp = document.getElementById("bin-inp");
+        let errorMsg = document.getElementById("error-msg");
+
+        // Convert decimal to binary when user inputs in the decimal field
+        decInp.addEventListener("input", () => {
+            let decValue = parseInt(decInp.value, 10);
+            // Converts the decimal value to binary
+            binInp.value = decValue.toString(2);
+        });
+
+        // Convert binary to decimal when user inputs in the binary field
+        binInp.addEventListener("input", () => {
+            let binValue = binInp.value;
+            // If the binary number is valid, convert it to decimal
+            if (binValidator(binValue)) {
+                decInp.value = parseInt(binValue, 2);
+                errorMsg.textContent = "";
+            }
+            // Else display an error message
+            else {
+                errorMsg.innerHTML = `
+                    <div role="alert" class="alert alert-warning">
+                        <i class="fa-solid fa-circle-info h-6 w-6 shrink-0 stroke-current"></i>
+                        <span>Warning: Invalid binary number! Only '0' and '1' are accepted.</span>
+                    </div>`;
+            }
+        });
+
+        // Function to check if the binary number is valid (i.e., it does not contain other numbers than 0 and 1)
+        function binValidator(num) {
+            for (let i = 0; i < num.length; i++) {
+                if (num[i] !== "0" && num[i] !== "1") {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+
+  </body>
+</html>
